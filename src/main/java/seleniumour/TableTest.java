@@ -36,6 +36,22 @@ String text = driver.findElement(By.cssSelector("#customers tr:nth-child(8) td:l
     public void testTables(){
         List<WebElement> listRow = driver.findElements(By.cssSelector("#customers tr"));
         System.out.println(listRow.size());
+
+        List<WebElement> columns = driver.findElements(By.cssSelector("#customers th"));
+        System.out.println(columns.size());
+
+        WebElement row4 = driver.findElement(By.cssSelector("#customers tr:nth-child(4)"));
+        System.out.println(row4.getText());
+
+        System.out.println(driver.findElement(By.xpath("//tr[4]")));
+
+        System.out.println(driver.findElement(By.xpath("//th[last()]")));
+
+
+
+
+
+
     }
 
     @AfterClass
